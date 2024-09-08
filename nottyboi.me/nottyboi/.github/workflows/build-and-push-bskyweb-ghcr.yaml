@@ -14,7 +14,6 @@ env:
 
 jobs:
   bskyweb-container-ghcr:
-    if: github.repository == 'bluesky-social/social-app'
     runs-on: ubuntu-latest
     permissions:
       contents: read
