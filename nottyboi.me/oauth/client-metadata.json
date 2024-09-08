@@ -2,7 +2,7 @@
     "client_id": "https://nottyboi.me/oauth/client-metadata.json",
     "client_name": "Nottyboi OAuth",
     "client_uri": "https://nottyboi.me",
-    "logo_uri": "https://nottyboi.me/assets/logo.png",
+    "logo_uri": "https://nottyboi.me/oauth/assets/logo.png",
     "tos_uri": "https://nottyboi.me/oauth/legal/terms.html",
     "policy_uri": "https://nottyboi.me/oauth/legal/privacy.html",
     "redirect_uris": [
