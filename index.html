@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NottyBoi - A decentralized social media platform for a safe and engaging space.">
+    <title>NottyBoi Collective</title>
+
+    <!-- Linking external stylesheets and fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Adding custom styles directly -->
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #eaeaea;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1d1d1d;
+            color: white;
+            padding: 20px 0;
+            border-bottom: 5px solid #444;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header img {
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline-block;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        .hero {
+            background: url('hero-background.jpg') center center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin: auto;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ff6600;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #e65c00;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .feature {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature img {
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        /* New section for Atproto API OAuth info */
+        .api-info {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 5px solid #ff6600;
+        }
+
+        .api-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .api-info pre {
+            text-align: left;
+            background-color: #1d1d1d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #1d1d1d;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 5px solid #444;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            .feature {
+                max-width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+    <!-- JavaScript for smooth scroll and other interactions -->
+    <script>
+        // Redirect to HTTPS if not already
+        if (window.location.protocol !== 'https:') {
+            window.location.href = 'https://' + window.location.hostname + window.location.pathname + window.location.search;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="assets/logo.png" alt="Nottyboi Logo" style="width: 150px; height: 110px;">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="legal/terms.html">Terms of Service</a></li>
+                    <li><a href="legal/privacy.html">Privacy Policy</a></li>
+                    <li><a href="legal/support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to NottyBoi Collective</h1>
+        <p>Building a decentralized social media platform that provides a safe, engaging, and inclusive space for the community.</p>
+        <a href="#" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features container">
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Community Focused">
+            <h3>Community Focused</h3>
+            <p>Our platform is designed with the community in mind, fostering connections and meaningful discussions.</p>
+        </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Security First">
+            <h3>Security First</h3>
+            <p>We prioritize your privacy and security, ensuring that your data is protected at all times.</p>
+        </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Innovative Technology">
+            <h3>Innovative Technology</h3>
+            <p>We leverage cutting-edge technologies to provide a seamless and modern user experience.</p>
+        </div>
+    </section>
+
+    <!-- Atproto API OAuth Info Section -->
+    <section class="api-info">
+        <h2>Atproto API Services OAuth Info</h2>
+        <pre>
+{
+    "client_id": "https://nottyboi.me/client-metadata.json",
+    "client_name": "Nottyboi OAuth App",
+    "client_uri": "https://nottyboi.me",
+    "logo_uri": "https://nottyboi.me/assets/logo.png",
+    "tos_uri": "https://nottyboi.me/legal/terms.html",
+    "policy_uri": "https://nottyboi.me/legal/privacy.html",
+    "redirect_uris": [
+        "https://nottyboi.me/callback"
+    ],
+    "scope": "openid profile email offline_access atproto",
+    "grant_types": [
+        "authorization_code",
+        "refresh_token"
+    ],
+    "response_types": [
+        "code"
+    ],
+    "token_endpoint_auth_method": "none",
+    "application_type": "web",
+    "dpop_bound_access_tokens": true,
+    "contacts": [
+        "admin@nottyboi.me"
+    ],
+    "jwks_uri": "https://nottyboi.me/.well-known/jwks.json",
+    "subject_type": "pairwise",
+    "id_token_signed_response_alg": "RS256",
+    "tls_client_certificate_bound_access_tokens": false,
+    "require_auth_time": true,
+    "default_max_age": 3600,
+    "initiate_login_uri": "https://nottyboi.me/initiate-login",
+    "post_logout_redirect_uris": [
+        "https://nottyboi.me/logout-callback"
+    ]
+}
+        </pre>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NottyBoi Collective. All rights reserved.</p>
+            <p>Follow us on
+                <a href="https://twitter.com/Nottyboi" target="_blank">Twitter</a> |
+                <a href="https://github.com/nottyboi-collective" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/company/nottyboi-collective" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

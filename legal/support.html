@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support for NottyBoi - A decentralized social media platform.">
+    <title>Support - NottyBoi Collective</title>
+
+    <!-- Linking external stylesheets and fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Adding custom styles directly -->
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #eaeaea;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1d1d1d;
+            color: white;
+            padding: 20px 0;
+            border-bottom: 5px solid #444;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header img {
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline-block;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .content p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #1d1d1d;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 5px solid #444;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content {
+                width: 95%;
+            }
+        }
+    </style>
+
+    <!-- JavaScript for smooth scroll and other interactions -->
+    <script>
+        // Redirect to HTTPS if not already
+        if (window.location.protocol !== 'https:') {
+            window.location.href = 'https://' + window.location.hostname + window.location.pathname + window.location.search;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="../assets/logo.png" alt="Nottyboi Logo">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content container">
+        <h2>Support</h2>
+        <p>If you need assistance, our support team is here to help you. Please use the contact information below to reach out to us, and we’ll do our best to address your concerns.</p>
+
+        <p><strong>Email Support:</strong> You can email us at <a href="mailto:support@nottyboi.me">support@nottyboi.me</a> for general inquiries, technical support, or account-related issues.</p>
+
+        <p><strong>Community Support:</strong> Join our community forum to ask questions, share ideas, and connect with other users. Our community is always ready to help.</p>
+
+        <p><strong>Social Media:</strong> Follow us on social media for updates, tips, and more. Reach out to us on:
+            <br><a href="https://twitter.com/Nottyboi" target="_blank">Twitter</a>
+            <br><a href="https://github.com/nottyboi-collective" target="_blank">GitHub</a>
+            <br><a href="https://www.linkedin.com/company/nottyboi-collective" target="_blank">LinkedIn</a>
+        </p>
+
+        <p><strong>FAQ:</strong> Check out our FAQ page for answers to common questions.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NottyBoi Collective. All rights reserved.</p>
+            <p>Follow us on
+                <a href="https://twitter.com/Nottyboi" target="_blank">Twitter</a> |
+                <a href="https://github.com/nottyboi-collective" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/company/nottyboi-collective" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
